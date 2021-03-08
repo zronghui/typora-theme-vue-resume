@@ -368,26 +368,36 @@ h1 {
     line-height: 1.3;
 }
 
+/* 修改标题的 margin */
+/* 上 0；左、右 0；下 15px */
 h2 {
     font-size: 1.75rem;
     line-height: 1.225;
-    margin: 35px 0 15px;
-    padding-bottom: 0.5em;
-    border-bottom: 1px solid #ddd;
+    margin: 0 0 5px;
+    padding-bottom: 0.1em;
+    /* border-bottom: 1px solid #ddd; */
 }
 
 h3 {
     font-size: 1.4rem;
     line-height: 1.43;
-    margin: 20px 0 7px;
+    margin: 7px 0 7px;
 }
 
+/* 给 h4 特殊效果(和引用效果一样, 只是没有背景颜色) */
 h4 {
     font-size: 1.2rem;
+    margin: 7px 0 7px;
+    border-left: 4px solid #42b983;
+    padding: 1px 10px;
+    color: #777;
+    /* background-color: rgba(66, 185, 131, .1); */
 }
 
+/* 去除 h5的 margin */
 h5 {
     font-size: 1rem;
+    margin: 0;
 }
 
 h6 {
@@ -395,13 +405,14 @@ h6 {
     color: #777;
 }
 
+/* 缩小 margin */
 p,
 blockquote,
 ul,
 ol,
 dl,
 table {
-    margin: 0.8em 0;
+    margin: -2px 0;
 }
 
 li > ol,
@@ -409,10 +420,16 @@ li > ul {
     margin: 0 0;
 }
 
+ol > li,
+ul > li {
+    margin: 0 0;
+}
+
+/* 分割线效果 */
 hr {
-    height: 2px;
+    height: 1px;
     padding: 0;
-    margin: 16px 0;
+    margin: 10px 0;
     background-color: #e7e7e7;
     border: 0 none;
     overflow: hidden;
@@ -465,9 +482,14 @@ li p.first {
     display: inline-block;
 }
 
+/* ul ol 缩进小一点 */
 ul,
 ol {
-    padding-left: 30px;
+    padding-left: 15px;
+    margin: 2px 0px;
+}
+li p {
+    margin: -3px;
 }
 
 ul:first-child,
@@ -480,9 +502,10 @@ ol:last-child {
     margin-bottom: 0;
 }
 
+/* 将引用的 padding 改小 */
 blockquote {
     border-left: 4px solid #42b983;
-    padding: 10px 15px;
+    padding: 1px 10px;
     color: #777;
     background-color: rgba(66, 185, 131, .1);
 }
